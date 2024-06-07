@@ -29,8 +29,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: https://github.com/john-pereira/qr-code-component
-- Live Site URL: https://john-pereira.github.io/qr-code-component
+- Solution URL: [https://github.com/john-pereira/recipe-page](https://github.com/john-pereira/recipe-page)
+- Live Site URL: [https://john-pereira.github.io/recipe-page](https://john-pereira.github.io/recipe-page/)
 
 ## My process
 

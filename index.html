@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Recipe page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+    :root{
+      --Nutmeg: hsl(14, 45%, 36%);
+      --Dark-Raspberry: hsl(332, 51%, 32%);
+
+      --White: hsl(0, 0%, 100%);
+      --Rose-White: hsl(330, 100%, 98%);
+      --Eggshell: hsl(30, 54%, 90%);
+      --Light-Grey: hsl(30, 18%, 87%);
+      --Wenge-Brown: hsl(30, 10%, 34%);
+      --Dark-Charcoal: hsl(24, 5%, 18%);
+
+      --family-y: 'Young Serif';
+      --family-o: 'Outfit';
+
+
+      --p-y: 2rem;
+
+      --f-w-4: 400;
+      --f-w-6: 600;
+      --f-w-7: 700;
+
+    }
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    h1{
+      font-family: var(--family-y);
+      font-weight: var(--f-w-4);
+      padding-top: var(--p-y);
+      font-size: 32px;
+    }
+    h2{
+      color: var(--Nutmeg);
+      font-family: var(--family-y);
+      font-weight: var(--f-w-6);
+    }
+    p{
+      color: var(--Wenge-Brown);
+      padding: var(--p-y) 0;
+      font-weight: var(--f-w-4);
+    }
+   
+    main{
+      background-color: var(--Eggshell);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--family-o);
+
+      section.recipe{
+      background-color: var(--White);
+      border-radius: 20px;
+
+        .recipe__header{
+          padding: 0;
+          img{
+            max-width: 100%;
+          }
+        }
+        
+        .recipe__content{
+          padding: 0 2rem;
+
+          .notecard{
+            background-color: var(--Rose-White);
+            border-radius: 15px;
+            padding: var(--p-y);
+            
+            h4{
+              color: var(--Dark-Raspberry);
+              font-size: 22px;
+            }
+            ul{
+              padding: 1rem 1rem;
+
+              li{
+                color: var(--Dark-Charcoal);
+                padding: 0.5rem 0;
+                
+              }
+              li::marker{
+                color: var(--Dark-Raspberry);
+              }
+            }
+            
+
+          }
+
+          .card{
+              display: grid;
+              padding: 1.5rem 0;
+              border-bottom: 1px solid var(--Light-Grey);
+            ol{
+              padding: 1.5rem;
+              li{
+                padding: 0.5rem;
+
+              }
+              li::marker{
+                color: var(--Nutmeg);
+                font-weight: var(--f-w-7);
+
+              }
+            }
+            ul{
+              padding: 1rem 1rem;
+
+              li{
+                padding: 0.5rem;
+                font-weight: var(--f-w-4);
+                color: var(--Wenge-Brown);
+              }
+              li::marker{
+                color: var(--Nutmeg);
+              }
+            }
+              
+
+          }
+          .card__table{
+            display: grid;
+              padding: 1.5rem 0;
+
+              li{
+                font-size: 16px;
+                padding: 0.5rem;
+                font-weight: var(--f-w-4);
+                color: var(--Wenge-Brown);
+              }
+              li::marker{
+                color: var(--Nutmeg);
+              }
+
+              table {
+
+                td{
+                  border-bottom: 1px solid var(--Light-Grey);
+                  padding: 1rem;
+                  color: var(--Wenge-Brown);
+                  font-weight: var(--f-w-6);
+                }
+                .td-right{
+                  color: var(--Nutmeg);
+                  font-weight: var(--f-w-7);
+                }
+                
+                
+              }
+          }
+
+        }
+        
+      
+      }
+     
+    }
+    @media only screen and (min-width: 769px){
+      main{
+
+      h1{
+      font-size:52px;
+      }
+      p{
+        font-size: 20px;
+        font-weight: var(--f-w-7);
+        color: var(--Wenge-Brown);
+      }
+
+      section.recipe{
+      background-color: var(--White);
+      padding: 3rem;
+      margin: 15vh auto;
+      max-width: 1000px;
+      border-radius: 30px;
+      }
+
+      .recipe__header{
+        img{
+          border-radius: 15px;
+        }
+      }
+      .recipe__content{
+        li{
+          font-size: 22px;
+          
+        }
+        td{
+          font-size: 22px;
+        }
+      }
+
+      .notecard{
+        background-color: var(--Rose-White);
+        border-radius: 15px;
+        padding: 2rem 3rem;
+        h4{
+          font-size: 28px;
+          color: var(--Dark-Raspberry);
+
+        }
+        ul{
+          padding: 1rem 1.5rem;
+
+          li{
+            font-size: 22px;
+            color: var(--Dark-Charcoal);
+            padding: 0.5rem 0;
+            
+          }
+          li::marker{
+            color: var(--Dark-Raspberry);
+          }
+        }
+        
+
+      }
+
+      .card{
+        ul{
+
+        li{
+          font-size: 20px;
+        }   
+
+        }
+        ol{
+
+        li{
+          font-size: 20px;
+        }   
+
+        }
+                  
+      }
+      
+      }
+    }
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  
+  <main>
+    <section class="recipe">
+      <div class="recipe__header">
+        <figure>
+          <img src="assets/images/image-omelette.jpeg" alt=""/>
+        </figure>
+      </div>
+
+      <div class="recipe__content">
+        <h1>Simple Omelette Recipe</h1>
+        <p>
+          An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
+          to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+        </p>
+        
+        <div class="notecard">
+          <h4>Preparation time</h2>
+          <ul>
+            <li><strong>Total:</strong> Approximately 10 minutes</li>
+            <li><strong>Preparation:</strong> 5 minutes</li>
+            <li><strong>Cooking:</strong> 5 minutes</li>
+          </ul>
+            
+        </div>
+        
+         <div class="card">
+            <h2>Ingredients</h2>
+
+            <ul>
+              <li>2-3 large eggs</li>
+              <li>Salt, to taste</li>
+              <li>Pepper, to taste</li>
+              <li>1 tablespoon of butter or oil</li>
+              <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+            </ul>
+
+         </div>
+       
+         <div class="card">
+            <h2>Instructions</h2>
+    
+            <ol>
+              <li><strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
+                You can add a tablespoon of water or milk for a fluffier texture.</li>
+              <li><strong>Heat the pan:</strong> Place a non-stick frying pan over medium heat and add butter or oil.</li>
+              <li><strong>Cook the omelette:</strong> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
+                the eggs evenly coat the surface.</li>
+              <li><strong>Add fillings (optional):</strong> When the eggs begin to set at the edges but are still slightly runny in the 
+                middle, sprinkle your chosen fillings over one half of the omelette.
+              </li>
+              <li><strong>Fold and serve:</strong> As the omelette continues to cook, carefully lift one edge and fold it over the 
+                fillings. Let it cook for another minute, then slide it onto a plate.</li>
+              <li><strong>Enjoy:</strong> Serve hot, with additional salt and pepper if needed.</li>
+            </ol>
+         </div>
+    
+         <div class="card__table">
+    
+          <h2>Nutrition</h2>
+          <p>The table below shows nutritional values per serving without the additional fillings.</p>
+          <table>
+            <tr>
+              <td>Calories</td>
+              <td class="td-right">277kcal</td>
+            </tr>
+            <tr>
+              <td>Carbs</td>
+              <td class="td-right">0g</td>
+            </tr>
+            <tr>
+              <td>Protein</td>
+              <td class="td-right">20g</td>
+            </tr>
+            <tr>
+              <td>Fat</td>
+              <td class="td-right">22g</td>
+            </tr>
+          </table>
+    
+         </div>
+      </div>
+     
+
+    </section>
+    
+    
+      
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://johnp.com.br/">John Pereira</a>.
+  </div>
+</body>
+</html>
